@@ -1,0 +1,61 @@
+Antes da etapa
+{
+  "version": 4,
+  "library": {
+    "movies": [
+      {
+        "genre": "crime",
+        "director": "Quentin Tarantino",
+        "title": "Reservoir Dogs",
+        "year": 1992
+      },
+      {
+        "genre": "action",
+        "director": "Brian De Palma",
+        "title": "Mission: Impossible",
+        "year": 1996,
+        "starring": [
+          "Tom Cruise"
+        ]
+      }
+    ],
+    "metadata": {
+      "lastUpdated": "2020-05-27T08:00:00.000Z"
+    },    "stringJson": "{\"arr\": [1, 2, 3, 4, 5], \"bool\": true, \"null\": null, \"number\": 1}"
+  }
+
+Depois  da etapa
+{
+  "movies": [
+    {
+      "genre": "crime",
+      "director": "Quentin Tarantino",
+      "title": "Reservoir Dogs",
+      "year": 1992
+    },
+    {
+      "genre": "action",
+      "director": "Brian De Palma",
+      "title": "Mission: Impossible",
+      "year": 1996,
+      "starring": [
+        "Tom Cruise"
+      ]
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2020-05-27T08:00:00.000Z"
+  },
+  "stringJson": "{\"arr\": [1, 2, 3, 4, 5], \"bool\": true, \"null\": null, \"number\": 1}"
+}
+
+"Lambda Invoke": {
+  "Type": "Task",
+  "Resource": "arn:aws:states:::lambda:invoke",
+  "Parameters": {
+    "Payload.$": "$",
+    "
+  },
+  "End": true
+}
+
